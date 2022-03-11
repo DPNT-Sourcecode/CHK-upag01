@@ -8,7 +8,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class HelloSolutionTest extends TestCase {
 
-    private HelloSoltion hello;
+    private HelloSolution hello;
 
     @Before
     public void setUp() {
