@@ -19,6 +19,11 @@ public class SumSolutionTest {
     public void compute_sum() {
 
         assertThat(sum.compute(1, 1), equalTo(2));
+        assertThat(sum.compute(2, 100), equalTo(102));
+        assertThat(sum.compute(0, 0), equalTo(0));
+        assertThat(sum.compute(100, 100), equalTo(200));
+        assertThat(sum.compute(50, 100), equalTo(150));
     }
 }
+
 
