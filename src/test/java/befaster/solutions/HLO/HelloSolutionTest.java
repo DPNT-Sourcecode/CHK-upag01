@@ -1,12 +1,14 @@
 package befaster.solutions.HLO;
 
-import junit.framework.TestCase;
+
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
+import static org.junit.Assert.assertEquals;
 
-public class HelloSolutionTest extends TestCase {
+public class HelloSolutionTest {
 
     private HelloSolution hello;
 
@@ -19,6 +21,6 @@ public class HelloSolutionTest extends TestCase {
 
     @Test
     public void hello() {
-        assertThat(hello.hello("John"), equalTo("Hello, Jonh!"));
+        assertEquals(hello.hello("Mark"), "Hello, Mark!");
     }
 }
