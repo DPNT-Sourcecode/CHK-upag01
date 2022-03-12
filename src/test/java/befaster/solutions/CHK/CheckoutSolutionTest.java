@@ -23,7 +23,19 @@ public class CheckoutSolutionTest {
         assertThat(checkoutSolution.checkout("C"), equalTo(20));
         assertThat(checkoutSolution.checkout("D"), equalTo(15));
     }
+
+    @Test
+    public void check_sum_single_items() {
+        assertThat(checkoutSolution.checkout("AA"), equalTo(100));
+        assertThat(checkoutSolution.checkout("BB"), equalTo(60));
+        assertThat(checkoutSolution.checkout("CC"), equalTo(40));
+        assertThat(checkoutSolution.checkout("DD"), equalTo(30));
+    }
+
+
+
 }
+
 
 
 
