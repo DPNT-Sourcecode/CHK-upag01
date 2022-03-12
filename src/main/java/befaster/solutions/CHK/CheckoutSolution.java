@@ -35,8 +35,19 @@ public class CheckoutSolution {
     }
 
     private Integer addToTotal(String sku, AtomicInteger units) {
-        return units.get()*prices.get(sku);
+
+        if ("A".equals(sku))
+            return units.get()/3*prices.get(sku) + units.get()%3*prices.get(sku);
+
+        if ("B".equals(sku))
+            return units.get()/2*prices.get(sku) + units.get()%2*prices.get(sku);
+
+
+        return -1;
+
+
     }
 }
+
 
 
