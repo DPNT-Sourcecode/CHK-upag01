@@ -17,12 +17,13 @@ public class CheckoutSolutionTest {
 
     @Test
     public void check_item_prices() {
-        assertEquals(50, checkoutSolution.checkout("A"));
-        assertEquals(30, checkoutSolution.checkout("B"));
-        assertEquals(20, checkoutSolution.checkout("C"));
-        assertEquals(10, checkoutSolution.checkout("D"));
+        assertEquals(50L, checkoutSolution.checkout("A"));
+        assertEquals(30L, checkoutSolution.checkout("B"));
+        assertEquals(20L, checkoutSolution.checkout("C"));
+        assertEquals(10L, checkoutSolution.checkout("D"));
     }
 }
+
 
 
 
