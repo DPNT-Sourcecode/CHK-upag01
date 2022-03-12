@@ -23,7 +23,7 @@ public class CheckoutSolution {
     public Integer checkout(String skus) {
 
         // Validate input
-        if (Arrays.stream(skus.split("")).anyMatch(sku -> prices.get(sku) == null))
+        if ( skus == null || Arrays.stream(skus.split("")).anyMatch(sku -> prices.get(sku) == null))
             return -1;
 
 
@@ -53,6 +53,7 @@ public class CheckoutSolution {
 
     }
 }
+
 
 
 
