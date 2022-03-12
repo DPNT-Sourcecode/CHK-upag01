@@ -31,7 +31,9 @@ public class CheckoutSolution {
 
 
 
-        return itemUnitsOnChart.keySet().stream().map(sku -> addToTotal(sku, itemUnitsOnChart.get(sku))).collect(Collectors.summingInt(Integer::intValue));
+        return itemUnitsOnChart.keySet().stream()
+                .map(sku -> addToTotal(sku, itemUnitsOnChart.get(sku)))
+                .collect(Collectors.summingInt(Integer::intValue));
     }
 
     private Integer addToTotal(String sku, AtomicInteger units) {
@@ -48,4 +50,5 @@ public class CheckoutSolution {
 
     }
 }
+
 
