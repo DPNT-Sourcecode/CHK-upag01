@@ -22,4 +22,3 @@ public class CheckoutSolution {
         return prices.get(skus);
     }
 }
-
