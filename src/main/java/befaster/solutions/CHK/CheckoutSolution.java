@@ -43,11 +43,12 @@ public class CheckoutSolution {
             return units.get()/2*prices.get(sku) + units.get()%2*prices.get(sku);
 
 
-        return -1;
+        return units.get()*prices.get(sku);
 
 
     }
 }
+
 
 
 
