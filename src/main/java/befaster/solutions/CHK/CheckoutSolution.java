@@ -22,18 +22,16 @@ public class CheckoutSolution {
 
     public Integer checkout(String skus) {
 
-//        Validate input
+        // Validate input
         if (Arrays.stream(skus.split("")).anyMatch(sku -> prices.get(sku) == null))
             return -1;
 
 
         final Map<String, AtomicInteger> itemUnitsOnChart = new HashMap<>();
-
         Arrays.stream(skus.split("")).forEach(sku -> {
             itemUnitsOnChart.putIfAbsent(sku, new AtomicInteger(0));
             itemUnitsOnChart.get(sku).incrementAndGet();
         });
-
 
 
         return itemUnitsOnChart.keySet().stream()
@@ -55,6 +53,7 @@ public class CheckoutSolution {
 
     }
 }
+
 
 
 
