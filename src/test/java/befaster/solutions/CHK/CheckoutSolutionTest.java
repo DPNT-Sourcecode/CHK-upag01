@@ -62,7 +62,7 @@ public class CheckoutSolutionTest {
     @Test
     public void test_E_offer() {
         assertThat(checkoutSolution.checkout("EEBB"), equalTo(110));
-        assertThat(checkoutSolution.checkout("EEEEEBBBB"), equalTo(245));
+        assertThat(checkoutSolution.checkout("EEEEEBBB"), equalTo(245));
     }
 
 
@@ -74,6 +74,7 @@ public class CheckoutSolutionTest {
 
 
 }
+
 
 
 
