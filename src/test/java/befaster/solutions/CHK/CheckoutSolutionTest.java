@@ -19,8 +19,8 @@ public class CheckoutSolutionTest {
 
     @Test
     public void test_illegal_input() {
+        assertThat(checkoutSolution.checkout(""), equalTo(0));
         assertThat(checkoutSolution.checkout(null), equalTo(-1));
-        assertThat(checkoutSolution.checkout(""), equalTo(-1));
         assertThat(checkoutSolution.checkout("3"), equalTo(-1));
         assertThat(checkoutSolution.checkout("   "), equalTo(-1));
         assertThat(checkoutSolution.checkout("a3B"), equalTo(-1));
@@ -64,6 +64,7 @@ public class CheckoutSolutionTest {
 
 
 }
+
 
 
 

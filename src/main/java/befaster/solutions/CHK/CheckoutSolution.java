@@ -23,7 +23,9 @@ public class CheckoutSolution {
     public Integer checkout(String skus) {
 
         // Validate input
-        if ( skus == null || Arrays.stream(skus.split("")).anyMatch(sku -> prices.get(sku) == null))
+        if (skus.equals(""))
+            return 0;
+        else if ( skus == null || Arrays.stream(skus.split("")).anyMatch(sku -> prices.get(sku) == null))
             return -1;
 
 
@@ -53,6 +55,7 @@ public class CheckoutSolution {
 
     }
 }
+
 
 
 
