@@ -24,17 +24,10 @@ public class CheckoutSolution {
 
         final Map<String, AtomicInteger> itemUnitsOnChart = new HashMap<>();
 
-        boolean ilegalInput = false;
         Arrays.stream(skus.split("")).forEach(sku -> {
-            if (prices.keySet().stream().noneMatch(key -> key.equals(sku)))
-                ilegalInput =  true;
-
             itemUnitsOnChart.putIfAbsent(sku, new AtomicInteger(0));
             itemUnitsOnChart.get(sku).incrementAndGet();
         });
-
-        if (ilegalInput)
-            return -1;
 
 
 
@@ -44,6 +37,9 @@ public class CheckoutSolution {
     }
 
     private Integer addToTotal(String sku, AtomicInteger units) {
+
+        if (prices.get(sku) == null)
+            return -1;
 
         if ("A".equals(sku))
             return units.get()/3*130 + units.get()%3*prices.get(sku);
@@ -57,4 +53,5 @@ public class CheckoutSolution {
 
     }
 }
+
 
