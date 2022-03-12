@@ -22,6 +22,11 @@ public class CheckoutSolution {
 
     public Integer checkout(String skus) {
 
+//        Validate input
+        if (Arrays.stream(skus.split("")).anyMatch(sku -> prices.get(sku) == null))
+            return -1;
+
+
         final Map<String, AtomicInteger> itemUnitsOnChart = new HashMap<>();
 
         Arrays.stream(skus.split("")).forEach(sku -> {
@@ -38,9 +43,6 @@ public class CheckoutSolution {
 
     private Integer addToTotal(String sku, AtomicInteger units) {
 
-        if (prices.get(sku) == null)
-            return -1;
-
         if ("A".equals(sku))
             return units.get()/3*130 + units.get()%3*prices.get(sku);
 
@@ -53,5 +55,6 @@ public class CheckoutSolution {
 
     }
 }
+
 
 
