@@ -17,6 +17,7 @@ public class CheckoutSolution {
         prices.put("B", 30);
         prices.put("C", 20);
         prices.put("D", 15);
+        prices.put("E", 40);
     }
 
 
@@ -44,7 +45,7 @@ public class CheckoutSolution {
     private Integer addToTotal(String sku, AtomicInteger units) {
 
         if ("A".equals(sku))
-            return units.get()/3*130 + units.get()%3*prices.get(sku);
+            return units.get()/5*200 + (units.get()%5)/3*130 + (units.get()%5)/3*prices.get(sku);
 
         if ("B".equals(sku))
             return units.get()/2*45 + units.get()%2*prices.get(sku);
@@ -55,3 +56,4 @@ public class CheckoutSolution {
 
     }
 }
+
