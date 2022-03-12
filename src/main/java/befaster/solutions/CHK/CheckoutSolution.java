@@ -36,10 +36,17 @@ public class CheckoutSolution {
             itemUnitsOnChart.get(sku).incrementAndGet();
         });
 
+        itemUnitsOnChart.keySet().stream().forEach(sku -> discountFreeItems(sku, itemUnitsOnChart));
 
         return itemUnitsOnChart.keySet().stream()
                 .map(sku -> addToTotal(sku, itemUnitsOnChart.get(sku)))
                 .collect(Collectors.summingInt(Integer::intValue));
+    }
+
+    private void discountFreeItems(String sku, Map<String, AtomicInteger> itemUnitsOnChart) {
+        if ("E".equals(sku) && itemUnitsOnChart.get("B") != null){
+            itemUnitsOnChart.get("B").decrementAndGet();
+        }
     }
 
     private Integer addToTotal(String sku, AtomicInteger units) {
@@ -56,5 +63,6 @@ public class CheckoutSolution {
 
     }
 }
+
 
 
