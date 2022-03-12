@@ -33,6 +33,20 @@ public class CheckoutSolutionTest {
     }
 
 
+    @Test
+    public void check_A_offer() {
+        assertThat(checkoutSolution.checkout("AAA"), equalTo(130));
+        assertThat(checkoutSolution.checkout("AAAAAA"), equalTo(260));
+    }
+
+
+    @Test
+    public void check_B_offer() {
+        assertThat(checkoutSolution.checkout("BB"), equalTo(45));
+        assertThat(checkoutSolution.checkout("BBBB"), equalTo(90));
+    }
+    
 
 }
+
 

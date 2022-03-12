@@ -22,7 +22,7 @@ public class CheckoutSolution {
 
     public Integer checkout(String skus) {
 
-        final Map<String, AtomicInteger> itemUnitsOnChart;
+        final Map<String, AtomicInteger> itemUnitsOnChart = new HashMap<>();
 
         Arrays.stream(skus.split("")).forEach(sku -> {
             itemUnitsOnChart.putIfAbsent(sku, new AtomicInteger(0));
@@ -34,8 +34,9 @@ public class CheckoutSolution {
         return itemUnitsOnChart.keySet().stream().map(sku -> addToTotal(sku, itemUnitsOnChart.get(sku))).collect(Collectors.summingInt(Integer::intValue));
     }
 
-    private Object addToTotal(String sku, AtomicInteger units) {
+    private Integer addToTotal(String sku, AtomicInteger units) {
         return units.get()*prices.get(sku);
     }
 }
+
 
