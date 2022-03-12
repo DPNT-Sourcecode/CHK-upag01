@@ -25,8 +25,8 @@ public class CheckoutSolution {
         final Map<String, AtomicInteger> itemUnitsOnChart = new HashMap<>();
 
         Arrays.stream(skus.split("")).forEach(sku -> {
-            if (prices.keySet().stream().noneMatch())
-                return -1;
+            if (prices.keySet().stream().noneMatch(key -> key.equals(sku)))
+                continue;
 
             itemUnitsOnChart.putIfAbsent(sku, new AtomicInteger(0));
             itemUnitsOnChart.get(sku).incrementAndGet();
@@ -53,6 +53,3 @@ public class CheckoutSolution {
 
     }
 }
-
-
-
