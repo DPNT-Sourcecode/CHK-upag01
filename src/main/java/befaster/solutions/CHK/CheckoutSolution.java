@@ -60,12 +60,11 @@ public class CheckoutSolution {
         });
 
 
-        // Group discount
         Integer groupTotal = calculateMultigroupDiscounts(itemUnitsOnChart);
 
         itemUnitsOnChart.keySet().stream().forEach(sku -> discountFreeItems(sku, itemUnitsOnChart));
 
-        return itemUnitsOnChart.keySet().stream()
+        return groupTotal + itemUnitsOnChart.keySet().stream()
                 .map(sku -> addToTotal(sku, itemUnitsOnChart.get(sku)))
                 .collect(Collectors.summingInt(Integer::intValue));
     }
@@ -81,10 +80,21 @@ public class CheckoutSolution {
 
         Collections.sort(groupDiscountPrices, Collections.reverseOrder());
 
-        int 
+        int remainderSum = 0;
+        int nGroupDiscounts = 0;
 
 
-        return 0
+        for (int i = 0; i < groupDiscountPrices.size(); i++){
+            if (i%2 == 0){
+                remainderSum = 0;
+                nGroupDiscounts++;
+            } else
+                remainderSum += groupDiscountPrices.indexOf(i);
+
+        }
+
+
+        return nGroupDiscounts*45 + remainderSum;
 
     }
 
@@ -151,6 +161,7 @@ public class CheckoutSolution {
 
     }
 }
+
 
 
 
