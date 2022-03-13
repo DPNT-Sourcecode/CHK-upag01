@@ -135,7 +135,7 @@ public class CheckoutSolution {
             return units.get()/10*80 + (units.get()%10)/5*45 + (units.get()%10)%5*prices.get(sku);
 
         if ("K".equals(sku))
-            return units.get()/2*150 + units.get()%2*prices.get(sku);
+            return units.get()/2*120 + units.get()%2*prices.get(sku);
 
         if ("P".equals(sku))
             return units.get()/5*200 + units.get()%5*prices.get(sku);
@@ -155,7 +155,3 @@ public class CheckoutSolution {
 
     }
 }
-
-
-
-
