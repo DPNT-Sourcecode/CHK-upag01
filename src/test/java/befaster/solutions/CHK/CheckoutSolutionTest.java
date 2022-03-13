@@ -137,6 +137,20 @@ public class CheckoutSolutionTest {
         assertThat(checkoutSolution.checkout("VVV"), equalTo(130));
     }
 
+            @Test
+    public void test_multi_group_discount_offer() {
+        assertThat(checkoutSolution.checkout("ST"), equalTo(40));
+        assertThat(checkoutSolution.checkout("SSS"), equalTo(45));
+        assertThat(checkoutSolution.checkout("TTT"), equalTo(45));
+        assertThat(checkoutSolution.checkout("XXX"), equalTo(45));
+        assertThat(checkoutSolution.checkout("YYY"), equalTo(45));
+        assertThat(checkoutSolution.checkout("ZZZ"), equalTo(45));
+        assertThat(checkoutSolution.checkout("STXYZZ"), equalTo(90));
+        assertThat(checkoutSolution.checkout("SSTTXXYZ"), equalTo(131));
+    }
+
+
+
 
     @Test
     public void test_sum_multiple_items() {
@@ -147,6 +161,7 @@ public class CheckoutSolutionTest {
 
 
 }
+
 
 
 
