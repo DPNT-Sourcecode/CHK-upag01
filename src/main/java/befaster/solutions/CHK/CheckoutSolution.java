@@ -61,9 +61,13 @@ public class CheckoutSolution {
         if ("B".equals(sku))
             return units.get()/2*45 + units.get()%2*prices.get(sku);
 
+        if ("F".equals(sku))
+            return units.get()/3*20 + units.get()%3*prices.get(sku);
+
 
         return units.get()*prices.get(sku);
 
 
     }
 }
+

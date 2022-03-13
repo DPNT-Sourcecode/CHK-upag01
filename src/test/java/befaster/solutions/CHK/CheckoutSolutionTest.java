@@ -33,6 +33,7 @@ public class CheckoutSolutionTest {
         assertThat(checkoutSolution.checkout("C"), equalTo(20));
         assertThat(checkoutSolution.checkout("D"), equalTo(15));
         assertThat(checkoutSolution.checkout("E"), equalTo(40));
+        assertThat(checkoutSolution.checkout("F"), equalTo(10));
     }
 
     @Test
@@ -58,6 +59,12 @@ public class CheckoutSolutionTest {
         assertThat(checkoutSolution.checkout("BBBB"), equalTo(90));
     }
 
+    @Test
+    public void test_F_offer() {
+        assertThat(checkoutSolution.checkout("FF"), equalTo(10));
+        assertThat(checkoutSolution.checkout("FFFF"), equalTo(20));
+    }
+
 
     @Test
     public void test_E_offer() {
@@ -77,4 +84,5 @@ public class CheckoutSolutionTest {
 
 
 }
+
 
