@@ -81,13 +81,6 @@ public class CheckoutSolutionTest {
         assertThat(checkoutSolution.checkout("BBBB"), equalTo(90));
     }
 
-    @Test
-    public void test_F_offer() {
-        assertThat(checkoutSolution.checkout("FF"), equalTo(20));
-        assertThat(checkoutSolution.checkout("FFF"), equalTo(20));
-        assertThat(checkoutSolution.checkout("FFFF"), equalTo(30));
-    }
-
 
     @Test
     public void test_E_offer() {
@@ -95,6 +88,53 @@ public class CheckoutSolutionTest {
         assertThat(checkoutSolution.checkout("EEEEEBBB"), equalTo(230));
         assertThat(checkoutSolution.checkout("EEEEBB"), equalTo(160));
         assertThat(checkoutSolution.checkout("BEBEEE"), equalTo(160));
+    }
+
+    @Test
+    public void test_F_offer() {
+        assertThat(checkoutSolution.checkout("FF"), equalTo(20));
+        assertThat(checkoutSolution.checkout("FFF"), equalTo(20));
+        assertThat(checkoutSolution.checkout("FFFF"), equalTo(30));
+    }
+
+    @Test
+    public void test_H_offer() {
+        assertThat(checkoutSolution.checkout("HHHHH"), equalTo(45));
+        assertThat(checkoutSolution.checkout("HHHHHHHHHH"), equalTo(80));
+    }
+
+    @Test
+    public void test_K_offer() {
+        assertThat(checkoutSolution.checkout("KK"), equalTo(150));
+    }
+
+    @Test
+    public void test_N_offer() {
+        assertThat(checkoutSolution.checkout("NNNM"), equalTo(120));
+    }
+
+    @Test
+    public void test_P_offer() {
+        assertThat(checkoutSolution.checkout("PPPPP"), equalTo(200));
+    }
+
+    @Test
+    public void test_Q_offer() {
+        assertThat(checkoutSolution.checkout("QQQ"), equalTo(80));
+    }
+
+    @Test
+    public void test_R_offer() {
+        assertThat(checkoutSolution.checkout("RRRQ"), equalTo(150));
+    }
+        @Test
+    public void test_U_offer() {
+        assertThat(checkoutSolution.checkout("UUU"), equalTo(80));
+    }
+        @Test
+    public void test_V_offer() {
+        assertThat(checkoutSolution.checkout("VV"), equalTo(90));
+        assertThat(checkoutSolution.checkout("VVV"), equalTo(130));
     }
 
 
@@ -107,6 +147,7 @@ public class CheckoutSolutionTest {
 
 
 }
+
 
 
 
