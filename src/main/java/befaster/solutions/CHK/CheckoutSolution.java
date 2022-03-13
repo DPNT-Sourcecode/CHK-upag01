@@ -114,7 +114,7 @@ public class CheckoutSolution {
             return units.get()/3*80 + units.get()%3*prices.get(sku);
 
         if ("U".equals(sku))
-            return units.get()/3*40 + units.get()%3*prices.get(sku);
+            return units.get()/4*120 + units.get()%4*prices.get(sku);
 
         if ("V".equals(sku))
             return units.get()/3*130 + (units.get()%3)/2*90 + (units.get()%3)%2*prices.get(sku);
@@ -125,5 +125,6 @@ public class CheckoutSolution {
 
     }
 }
+
 
 

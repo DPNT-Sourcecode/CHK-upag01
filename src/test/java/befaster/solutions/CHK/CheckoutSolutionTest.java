@@ -129,7 +129,7 @@ public class CheckoutSolutionTest {
     }
         @Test
     public void test_U_offer() {
-        assertThat(checkoutSolution.checkout("UUU"), equalTo(80));
+        assertThat(checkoutSolution.checkout("UUUU"), equalTo(120));
     }
         @Test
     public void test_V_offer() {
@@ -147,4 +147,5 @@ public class CheckoutSolutionTest {
 
 
 }
+
 
