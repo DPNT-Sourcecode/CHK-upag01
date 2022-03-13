@@ -2,9 +2,7 @@ package befaster.solutions.CHK;
 
 import befaster.runner.SolutionNotImplementedException;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
@@ -63,13 +61,24 @@ public class CheckoutSolution {
 
 
         // Group discount
-
+        Integer groupTotal = calculateMultigroupDiscounts(itemUnitsOnChart);
 
         itemUnitsOnChart.keySet().stream().forEach(sku -> discountFreeItems(sku, itemUnitsOnChart));
 
         return itemUnitsOnChart.keySet().stream()
                 .map(sku -> addToTotal(sku, itemUnitsOnChart.get(sku)))
                 .collect(Collectors.summingInt(Integer::intValue));
+    }
+
+    private Integer calculateMultigroupDiscounts(Map<String, AtomicInteger> itemUnitsOnChart) {
+        List<Integer> groupDiscountPrices = new ArrayList<>();
+
+        if (itemUnitsOnChart.get("S")!=null)
+            foreach (itemUnitsOnChart.get("S"))
+
+
+
+
     }
 
     private void discountFreeItems(String sku, Map<String, AtomicInteger> itemUnitsOnChart) {
@@ -129,4 +138,5 @@ public class CheckoutSolution {
 
     }
 }
+
 
