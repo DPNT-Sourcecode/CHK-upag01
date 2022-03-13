@@ -61,6 +61,10 @@ public class CheckoutSolution {
             itemUnitsOnChart.get(sku).incrementAndGet();
         });
 
+
+        // Group discount
+        
+
         itemUnitsOnChart.keySet().stream().forEach(sku -> discountFreeItems(sku, itemUnitsOnChart));
 
         return itemUnitsOnChart.keySet().stream()
@@ -125,6 +129,7 @@ public class CheckoutSolution {
 
     }
 }
+
 
 
 
