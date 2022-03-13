@@ -146,10 +146,9 @@ public class CheckoutSolutionTest {
         assertThat(checkoutSolution.checkout("YYY"), equalTo(45));
         assertThat(checkoutSolution.checkout("ZZZ"), equalTo(45));
         assertThat(checkoutSolution.checkout("STXYZZ"), equalTo(90));
-        assertThat(checkoutSolution.checkout("SSZTTZXY"), equalTo(130));
+        assertThat(checkoutSolution.checkout("SSZTTZXY"), equalTo(127));
+        assertThat(checkoutSolution.checkout("SSZTTXXY"), equalTo(124));
     }
-
-
 
 
     @Test
@@ -161,5 +160,6 @@ public class CheckoutSolutionTest {
 
 
 }
+
 
 
