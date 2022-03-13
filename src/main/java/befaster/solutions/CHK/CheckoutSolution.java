@@ -40,10 +40,6 @@ public class CheckoutSolution {
     }
 
 
-
-
-
-
     public Integer checkout(String skus) {
 
         // Validate input
@@ -93,7 +89,6 @@ public class CheckoutSolution {
 
         }
 
-
         return nGroupDiscounts*45 + remainderSum;
 
     }
@@ -107,7 +102,7 @@ public class CheckoutSolution {
     private void discountFreeItems(String sku, Map<String, AtomicInteger> itemUnitsOnChart) {
         if ("E".equals(sku) && itemUnitsOnChart.get("B") != null){
             for (int i = 0; i < itemUnitsOnChart.get("E").get() / 2; i++)
-              itemUnitsOnChart.get("B").decrementAndGet();
+                itemUnitsOnChart.get("B").decrementAndGet();
         }
 
         if ("N".equals(sku) && itemUnitsOnChart.get("M") != null){
@@ -161,5 +156,6 @@ public class CheckoutSolution {
 
     }
 }
+
 
 
