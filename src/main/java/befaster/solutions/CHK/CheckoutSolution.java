@@ -89,7 +89,7 @@ public class CheckoutSolution {
                 remainderSum = 0;
                 nGroupDiscounts++;
             } else
-                remainderSum += groupDiscountPrices.indexOf(i);
+                remainderSum += groupDiscountPrices.get(i);
 
         }
 
@@ -161,4 +161,5 @@ public class CheckoutSolution {
 
     }
 }
+
 

@@ -28,32 +28,32 @@ public class CheckoutSolutionTest {
 
     @Test
     public void test_item_prices() {
-//        assertThat(checkoutSolution.checkout("A"), equalTo(50));
-//        assertThat(checkoutSolution.checkout("B"), equalTo(30));
-//        assertThat(checkoutSolution.checkout("C"), equalTo(20));
-//        assertThat(checkoutSolution.checkout("D"), equalTo(15));
-//        assertThat(checkoutSolution.checkout("E"), equalTo(40));
-//        assertThat(checkoutSolution.checkout("F"), equalTo(10));
-//        assertThat(checkoutSolution.checkout("G"), equalTo(20));
-//        assertThat(checkoutSolution.checkout("H"), equalTo(10));
-//        assertThat(checkoutSolution.checkout("I"), equalTo(35));
-//        assertThat(checkoutSolution.checkout("J"), equalTo(60));
-//        assertThat(checkoutSolution.checkout("K"), equalTo(70));
-//        assertThat(checkoutSolution.checkout("L"), equalTo(90));
-//        assertThat(checkoutSolution.checkout("M"), equalTo(15));
-//        assertThat(checkoutSolution.checkout("N"), equalTo(40));
-//        assertThat(checkoutSolution.checkout("O"), equalTo(10));
-//        assertThat(checkoutSolution.checkout("P"), equalTo(50));
-//        assertThat(checkoutSolution.checkout("Q"), equalTo(30));
-//        assertThat(checkoutSolution.checkout("R"), equalTo(50));
+        assertThat(checkoutSolution.checkout("A"), equalTo(50));
+        assertThat(checkoutSolution.checkout("B"), equalTo(30));
+        assertThat(checkoutSolution.checkout("C"), equalTo(20));
+        assertThat(checkoutSolution.checkout("D"), equalTo(15));
+        assertThat(checkoutSolution.checkout("E"), equalTo(40));
+        assertThat(checkoutSolution.checkout("F"), equalTo(10));
+        assertThat(checkoutSolution.checkout("G"), equalTo(20));
+        assertThat(checkoutSolution.checkout("H"), equalTo(10));
+        assertThat(checkoutSolution.checkout("I"), equalTo(35));
+        assertThat(checkoutSolution.checkout("J"), equalTo(60));
+        assertThat(checkoutSolution.checkout("K"), equalTo(70));
+        assertThat(checkoutSolution.checkout("L"), equalTo(90));
+        assertThat(checkoutSolution.checkout("M"), equalTo(15));
+        assertThat(checkoutSolution.checkout("N"), equalTo(40));
+        assertThat(checkoutSolution.checkout("O"), equalTo(10));
+        assertThat(checkoutSolution.checkout("P"), equalTo(50));
+        assertThat(checkoutSolution.checkout("Q"), equalTo(30));
+        assertThat(checkoutSolution.checkout("R"), equalTo(50));
         assertThat(checkoutSolution.checkout("S"), equalTo(20));
-//        assertThat(checkoutSolution.checkout("T"), equalTo(20));
-//        assertThat(checkoutSolution.checkout("U"), equalTo(40));
-//        assertThat(checkoutSolution.checkout("V"), equalTo(50));
-//        assertThat(checkoutSolution.checkout("W"), equalTo(20));
-//        assertThat(checkoutSolution.checkout("X"), equalTo(17));
-//        assertThat(checkoutSolution.checkout("Y"), equalTo(20));
-//        assertThat(checkoutSolution.checkout("Z"), equalTo(21));
+        assertThat(checkoutSolution.checkout("T"), equalTo(20));
+        assertThat(checkoutSolution.checkout("U"), equalTo(40));
+        assertThat(checkoutSolution.checkout("V"), equalTo(50));
+        assertThat(checkoutSolution.checkout("W"), equalTo(20));
+        assertThat(checkoutSolution.checkout("X"), equalTo(17));
+        assertThat(checkoutSolution.checkout("Y"), equalTo(20));
+        assertThat(checkoutSolution.checkout("Z"), equalTo(21));
 
 
     }
@@ -146,7 +146,7 @@ public class CheckoutSolutionTest {
         assertThat(checkoutSolution.checkout("YYY"), equalTo(45));
         assertThat(checkoutSolution.checkout("ZZZ"), equalTo(45));
         assertThat(checkoutSolution.checkout("STXYZZ"), equalTo(90));
-        assertThat(checkoutSolution.checkout("SSTTXXYZ"), equalTo(131));
+        assertThat(checkoutSolution.checkout("SSZTTZXY"), equalTo(130));
     }
 
 
@@ -161,4 +161,5 @@ public class CheckoutSolutionTest {
 
 
 }
+
 
