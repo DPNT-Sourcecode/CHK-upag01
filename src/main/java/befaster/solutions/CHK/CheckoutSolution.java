@@ -45,11 +45,15 @@ public class CheckoutSolution {
 
     private void discountFreeItems(String sku, Map<String, AtomicInteger> itemUnitsOnChart) {
         if ("E".equals(sku) && itemUnitsOnChart.get("B") != null){
-            itemUnitsOnChart.get("B").decrementAndGet();
+            for (int i = 0; i < itemUnitsOnChart.get("E").get() / 2; i++)
+              itemUnitsOnChart.get("B").decrementAndGet();
         }
     }
 
     private Integer addToTotal(String sku, AtomicInteger units) {
+
+        if(units.get() < 0)
+            return 0;
 
         if ("A".equals(sku))
             return units.get()/5*200 + (units.get()%5)/3*130 + (units.get()%5)%3*prices.get(sku);
@@ -63,6 +67,7 @@ public class CheckoutSolution {
 
     }
 }
+
 
 
 
