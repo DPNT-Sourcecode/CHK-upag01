@@ -85,7 +85,7 @@ public class CheckoutSolution {
 
 
         for (int i = 0; i < groupDiscountPrices.size(); i++){
-            if (i%2 == 0){
+            if ((i+1)%3 == 0){
                 remainderSum = 0;
                 nGroupDiscounts++;
             } else
@@ -161,8 +161,3 @@ public class CheckoutSolution {
 
     }
 }
-
-
-
-
-
