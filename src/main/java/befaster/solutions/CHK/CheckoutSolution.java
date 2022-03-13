@@ -18,6 +18,7 @@ public class CheckoutSolution {
         prices.put("C", 20);
         prices.put("D", 15);
         prices.put("E", 40);
+        prices.put("F", 10);
     }
 
 
@@ -70,4 +71,5 @@ public class CheckoutSolution {
 
     }
 }
+
 
