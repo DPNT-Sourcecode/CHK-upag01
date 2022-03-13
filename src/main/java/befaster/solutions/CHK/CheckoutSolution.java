@@ -73,12 +73,19 @@ public class CheckoutSolution {
     private Integer calculateMultigroupDiscounts(Map<String, AtomicInteger> itemUnitsOnChart) {
         List<Integer> groupDiscountPrices = new ArrayList<>();
 
-        if (itemUnitsOnChart.get("S")!=null)
-            foreach (itemUnitsOnChart.get("S"))
+        checkGroupDiscountFor("S", itemUnitsOnChart, groupDiscountPrices);
+        checkGroupDiscountFor("T", itemUnitsOnChart, groupDiscountPrices);
+        checkGroupDiscountFor("X", itemUnitsOnChart, groupDiscountPrices);
+        checkGroupDiscountFor("Y", itemUnitsOnChart, groupDiscountPrices);
+        checkGroupDiscountFor("Z", itemUnitsOnChart, groupDiscountPrices);
 
 
+    }
 
-
+    private void checkGroupDiscountFor(String sku, Map<String, AtomicInteger> itemUnitsOnChart, List<Integer> groupDiscountPrices) {
+        if (itemUnitsOnChart.get(sku)!=null)
+            for (int i = 0; i < itemUnitsOnChart.get(sku).get(); i++)
+                    groupDiscountPrices.add(prices.get(sku));
     }
 
     private void discountFreeItems(String sku, Map<String, AtomicInteger> itemUnitsOnChart) {
@@ -138,5 +145,6 @@ public class CheckoutSolution {
 
     }
 }
+
 
 
