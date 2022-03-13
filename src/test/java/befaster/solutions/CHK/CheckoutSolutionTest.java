@@ -106,8 +106,8 @@ public class CheckoutSolutionTest {
     @Test
     public void test_K_offer() {
         assertThat(checkoutSolution.checkout("KK"), equalTo(120));
-        assertThat(checkoutSolution.checkout("KKK"), equalTo(220));
-        assertThat(checkoutSolution.checkout("KKKK"), equalTo(300));
+        assertThat(checkoutSolution.checkout("KKK"), equalTo(190));
+        assertThat(checkoutSolution.checkout("KKKK"), equalTo(240));
     }
 
     @Test
@@ -162,4 +162,5 @@ public class CheckoutSolutionTest {
 
 
 }
+
 
