@@ -102,21 +102,21 @@ public class CheckoutSolution {
             return units.get()/3*20 + units.get()%3*prices.get(sku);
 
         if ("H".equals(sku))
-            return units.get()/10*80 + (units.get()%5)/3*45 + (units.get()%5)%3*prices.get(sku);
+            return units.get()/10*80 + (units.get()%10)/5*45 + (units.get()%10)%5*prices.get(sku);
 
         if ("K".equals(sku))
             return units.get()/2*150 + units.get()%2*prices.get(sku);
 
-        if ("K".equals(sku))
-            return units.get()/5*200 + units.get()%2*prices.get(sku);
+        if ("P".equals(sku))
+            return units.get()/5*200 + units.get()%5*prices.get(sku);
 
         if ("Q".equals(sku))
-            return units.get()/3*80 + units.get()%2*prices.get(sku);
+            return units.get()/3*80 + units.get()%3*prices.get(sku);
 
         if ("U".equals(sku))
             return units.get()/3*40 + units.get()%3*prices.get(sku);
 
-        if ("H".equals(sku))
+        if ("V".equals(sku))
             return units.get()/3*130 + (units.get()%3)/2*90 + (units.get()%3)%2*prices.get(sku);
 
 
@@ -125,4 +125,5 @@ public class CheckoutSolution {
 
     }
 }
+
 
