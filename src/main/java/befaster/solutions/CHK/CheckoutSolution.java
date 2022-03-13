@@ -115,7 +115,6 @@ public class CheckoutSolution {
               itemUnitsOnChart.get("Q").decrementAndGet();
         }
 
-
     }
 
     private Integer addToTotal(String sku, AtomicInteger units) {
@@ -156,6 +155,7 @@ public class CheckoutSolution {
 
     }
 }
+
 
 
 
