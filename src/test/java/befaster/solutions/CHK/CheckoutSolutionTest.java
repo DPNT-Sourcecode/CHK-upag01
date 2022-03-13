@@ -63,6 +63,9 @@ public class CheckoutSolutionTest {
     public void test_E_offer() {
         assertThat(checkoutSolution.checkout("EEBB"), equalTo(110));
         assertThat(checkoutSolution.checkout("EEEEEBBB"), equalTo(245));
+        assertThat(checkoutSolution.checkout("ABCDE"), equalTo(155));
+        assertThat(checkoutSolution.checkout("EEEEBB"), equalTo(160));
+        assertThat(checkoutSolution.checkout("BEBEEE"), equalTo(1600));
     }
 
 
@@ -74,6 +77,7 @@ public class CheckoutSolutionTest {
 
 
 }
+
 
 
 
