@@ -79,6 +79,12 @@ public class CheckoutSolution {
         checkGroupDiscountFor("Y", itemUnitsOnChart, groupDiscountPrices);
         checkGroupDiscountFor("Z", itemUnitsOnChart, groupDiscountPrices);
 
+        Collections.sort(groupDiscountPrices, Collections.reverseOrder());
+
+        int 
+
+
+        return 0
 
     }
 
@@ -145,6 +151,7 @@ public class CheckoutSolution {
 
     }
 }
+
 
 
 
