@@ -125,7 +125,7 @@ public class CheckoutSolution {
 
     private Integer addToTotal(String sku, AtomicInteger units) {
 
-        if(units.get() < 0)
+        if(units.get() < 0 || sku.matches("[STXYZ]"))
             return 0;
 
         if ("A".equals(sku))
@@ -161,3 +161,4 @@ public class CheckoutSolution {
 
     }
 }
+
