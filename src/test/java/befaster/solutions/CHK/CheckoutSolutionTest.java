@@ -62,23 +62,19 @@ public class CheckoutSolutionTest {
     @Test
     public void test_E_offer() {
         assertThat(checkoutSolution.checkout("EEBB"), equalTo(110));
-        assertThat(checkoutSolution.checkout("EEEEEBBB"), equalTo(245));
-        assertThat(checkoutSolution.checkout("ABCDE"), equalTo(155));
+        assertThat(checkoutSolution.checkout("EEEEEBBB"), equalTo(230));
         assertThat(checkoutSolution.checkout("EEEEBB"), equalTo(160));
-        assertThat(checkoutSolution.checkout("BEBEEE"), equalTo(1600));
+        assertThat(checkoutSolution.checkout("BEBEEE"), equalTo(160));
     }
 
 
     @Test
     public void test_sum_multiple_items() {
         assertThat(checkoutSolution.checkout("ACCABDDBB"), equalTo(245));
+        assertThat(checkoutSolution.checkout("ABCDE"), equalTo(155));
     }
 
 
 
 }
-
-
-
-
 
