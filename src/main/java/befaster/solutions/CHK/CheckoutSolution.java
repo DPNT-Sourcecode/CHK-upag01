@@ -73,6 +73,18 @@ public class CheckoutSolution {
             for (int i = 0; i < itemUnitsOnChart.get("E").get() / 2; i++)
               itemUnitsOnChart.get("B").decrementAndGet();
         }
+
+        if ("N".equals(sku) && itemUnitsOnChart.get("M") != null){
+            for (int i = 0; i < itemUnitsOnChart.get("N").get() / 3; i++)
+              itemUnitsOnChart.get("M").decrementAndGet();
+        }
+
+        if ("R".equals(sku) && itemUnitsOnChart.get("Q") != null){
+            for (int i = 0; i < itemUnitsOnChart.get("R").get() / 3; i++)
+              itemUnitsOnChart.get("Q").decrementAndGet();
+        }
+
+
     }
 
     private Integer addToTotal(String sku, AtomicInteger units) {
@@ -89,9 +101,28 @@ public class CheckoutSolution {
         if ("F".equals(sku))
             return units.get()/3*20 + units.get()%3*prices.get(sku);
 
+        if ("H".equals(sku))
+            return units.get()/10*80 + (units.get()%5)/3*45 + (units.get()%5)%3*prices.get(sku);
+
+        if ("K".equals(sku))
+            return units.get()/2*150 + units.get()%2*prices.get(sku);
+
+        if ("K".equals(sku))
+            return units.get()/5*200 + units.get()%2*prices.get(sku);
+
+        if ("Q".equals(sku))
+            return units.get()/3*80 + units.get()%2*prices.get(sku);
+
+        if ("U".equals(sku))
+            return units.get()/3*40 + units.get()%3*prices.get(sku);
+
+        if ("H".equals(sku))
+            return units.get()/3*130 + (units.get()%3)/2*90 + (units.get()%3)%2*prices.get(sku);
+
 
         return units.get()*prices.get(sku);
 
 
     }
 }
+
