@@ -13,13 +13,37 @@ public class CheckoutSolution {
 
     public CheckoutSolution() {
         prices = new HashMap<>();
-        prices.put("A", 50);
-        prices.put("B", 30);
-        prices.put("C", 20);
-        prices.put("D", 15);
-        prices.put("E", 40);
-        prices.put("F", 10);
+        prices.put("A", 50); //    | 3A for 130, 5A for 200 |
+        prices.put("B", 30); //    | 2B for 45              |
+        prices.put("C", 20); //    |                        |
+        prices.put("D", 15); //    |                        |
+        prices.put("E", 40); //    | 2E get one B free      |
+        prices.put("F", 10); //    | 2F get one F free      |
+        prices.put("G", 20); //    |                        |
+        prices.put("H", 10); //    | 5H for 45, 10H for 80  |
+        prices.put("I", 35); //    |                        |
+        prices.put("J", 60); //    |                        |
+        prices.put("K", 80); //    | 2K for 150             |
+        prices.put("L", 90); //    |                        |
+        prices.put("M", 15); //    |                        |
+        prices.put("N", 40); //    | 3N get one M free      |
+        prices.put("O", 10); //    |                        |
+        prices.put("P", 50); //    | 5P for 200             |
+        prices.put("Q", 30); //    | 3Q for 80              |
+        prices.put("R", 50); //    | 3R get one Q free      |
+        prices.put("S", 30); //    |                        |
+        prices.put("T", 20); //    |                        |
+        prices.put("U", 40); //    | 3U get one U free      |
+        prices.put("V", 50); //    | 2V for 90, 3V for 130  |
+        prices.put("W", 20); //    |                        |
+        prices.put("X", 90); //    |                        |
+        prices.put("Y", 10); //    |                        |
+        prices.put("Z", 50); //    |                        |
     }
+
+
+
+
 
 
     public Integer checkout(String skus) {
@@ -71,5 +95,6 @@ public class CheckoutSolution {
 
     }
 }
+
 
 
