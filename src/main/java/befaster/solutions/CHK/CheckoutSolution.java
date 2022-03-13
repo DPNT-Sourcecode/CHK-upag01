@@ -63,7 +63,7 @@ public class CheckoutSolution {
 
 
         // Group discount
-        
+
 
         itemUnitsOnChart.keySet().stream().forEach(sku -> discountFreeItems(sku, itemUnitsOnChart));
 
@@ -129,3 +129,4 @@ public class CheckoutSolution {
 
     }
 }
+
