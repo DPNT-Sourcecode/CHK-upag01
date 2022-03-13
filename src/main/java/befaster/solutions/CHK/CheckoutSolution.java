@@ -129,8 +129,3 @@ public class CheckoutSolution {
 
     }
 }
-
-
-
-
-
